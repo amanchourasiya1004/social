@@ -1,0 +1,9 @@
+{% for i in track %}
+{{i.username}}
+{% endfor %}
+<br/><br/><br/>
+<form method = 'POST' action = "{% url 'index' %}">
+    {% csrf_token %}
+    <input type = 'text' name = 'name' id = 'name'>
+    <input type = 'submit'>
+</form>
